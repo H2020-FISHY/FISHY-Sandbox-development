@@ -151,6 +151,10 @@ if [[ "$domain_config" == "fishy-control-services" ]]; then
 	git clone https://github.com/H2020-FISHY/IRO.git &> /dev/null
 	kubectl apply -f $HOME/IRO/deployment/iro_kubernetes.yml
 	sudo rm -r $HOME/IRO
+	
+	git clone https://github.com/H2020-FISHY/TIM-Deployment.git &> /dev/null
+	kubectl apply -f $HOME/TIM-Deployment/central-repository.yml
+	sudo rm -r $HOME/TIM-Deployment
 fi
 
 
